@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_ACCOUNTING_VIEW_ITEM" 
+		option="COM_ACCOUNTING_VIEW_ITEM_OPTION">
+		
+		<message>
+			<![CDATA[COM_ACCOUNTING_VIEW_ITEM_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+
+		<!-- Options -->
+		<fieldset name="options">
+		</fieldset>
+
+	</fields>
+	<fields name="request">
+        <fieldset name="request">
+            <field  name="form"
+                    type="text"
+                    label="COM_ACCOUNTING_FORM_NAME"
+                    description="COM_ACCOUNTING_NAME_DESC"
+            >
+            </field>
+			<field  name="table"
+                    type="text"
+                    label="COM_ACCOUNTING_TABLE_NAME"
+                    description="COM_ACCOUNTING_TABLE_DESC"
+            >
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

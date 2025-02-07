@@ -1,0 +1,63 @@
+
+tbody .control-group .controls {
+    min-width: 100px !important;
+}
+
+td {
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    width: 1% !important;
+}
+
+tr :nth-child(1) {
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+tr :nth-child(3) {
+    min-width: 120px !important;
+    
+}
+
+tr :nth-child(4) {
+    text-align: right !important;
+}
+
+tr :nth-child(5) {
+    text-align: right !important;
+}
+
+tr :nth-child(9) {
+    min-width: 200px !important;
+    
+}
+
+
+input#jform_amount {
+    width: 100px !important;
+}
+
+input#jform_price {
+    width: 100px !important;
+}
+
+input#jform_amountTAX {
+    width: 100px !important;
+}
+
+.form-control .joomla-tab-element {
+    padding: 0 !important;
+  
+}
+
+div span .btn-primary .btn {
+    min-width: 20px !important;
+
+}
+
+
+
+
+
+

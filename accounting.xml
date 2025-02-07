@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+	<name>accounting</name>
+	<author>Vlad DVN</author>
+	<authorEmail>vladdvn@gmail.com</authorEmail>
+	<authorUrl>salto.org.ua</authorUrl>
+	<creationDate>2023-02-01</creationDate>
+	<copyright>(C) 2023-2024 VladDVN</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>0.0.3</version>
+	<description>COM_ACCOUNTING_DESCRIPTION</description>
+	<namespace path="src">Accountingroot\Component\Accounting</namespace>
+
+	<media destination="com_accounting" folder="media">
+		<file>joomla.asset.json</file>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+
+	
+	<scriptfile>
+		script.accounting.php
+	</scriptfile>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<administration>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>field</folder>
+			<folder>forms</folder>
+			<folder>help</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/com_accounting.sys.ini</language>
+            <language tag="en-GB">en-GB/com_accounting.ini</language>
+			<language tag="uk-UA">uk-UA/com_accounting.sys.ini</language>
+            <language tag="uk-UA">uk-UA/com_accounting.ini</language>
+		</languages>
+		
+		<menu img="class:default">accounting</menu>
+				
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			
+				
+			<menu
+				link="option=com_accounting&amp;view=structure"
+				img="default"
+			>
+				COM_ACCOUNTING_STRUCTURE <!-- Метадані -->
+			</menu>
+			
+			<menu
+				link="option=com_accounting&amp;view=catalog&amp;catid=20"
+				img="class:default"
+			>
+				COM_ACCOUNTING_CATALOGS <!-- Види Довідників -->
+			</menu>
+			<menu
+				link="option=com_accounting&amp;view=catalog&amp;catid=100"
+				img="class:default"
+			>
+				COM_ACCOUNTING_DOCUMENTS <!-- Види Документів -->
+			</menu>
+		
+		
+			<menu 
+				link="option=com_accounting&amp;view=accounting"
+				img="class:default"
+			>
+				COM_ACCOUNTING_DATA
+			</menu>
+				
+			<menu 
+				link="option=com_categories&amp;extension=com_accounting">
+				JCATEGORIES
+			</menu>
+			
+		</submenu>	
+		
+	</administration>
+	
+	
+</extension>
