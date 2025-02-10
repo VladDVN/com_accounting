@@ -7,7 +7,7 @@
 	<creationDate>2023-02-01</creationDate>
 	<copyright>(C) 2023-2024 VladDVN</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<description>COM_ACCOUNTING_DESCRIPTION</description>
 	<namespace path="src">Accountingroot\Component\Accounting</namespace>
 
